@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 
 public class NumRepo {
@@ -20,6 +21,7 @@ public class NumRepo {
             numArray.remove(tmp);
         }
         System.out.println(numArray);
+        Collections.sort(pickedNum);
 
     }
 }
