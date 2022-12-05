@@ -13,7 +13,7 @@ public class NumRepo {
         }
     }
 
-    public void selectNum(){ //
+    public void selectNum(){
         for (int i = 0; i < 6; i++) {
         int tmp = ranNum.nextInt(numArray.size());
             pickedNum.add(numArray.get(tmp));
@@ -24,7 +24,7 @@ public class NumRepo {
     }
 
     public final void run(){
-        for (int i = 0 ; i < 6 ; i ++) {
+        for (int i = 0 ; i < 5 ; i ++) {
             setNumArray();
             selectNum();
             System.out.println(pickedNum);
