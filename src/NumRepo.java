@@ -11,17 +11,25 @@ public class NumRepo {
         for(int i = 1 ; i < 46 ; i ++){
             numArray.add(i);
         }
-        System.out.println("숫자설정완료");
     }
 
-    public void selectNum(){
+    public void selectNum(){ //
         for (int i = 0; i < 6; i++) {
         int tmp = ranNum.nextInt(numArray.size());
             pickedNum.add(numArray.get(tmp));
             numArray.remove(tmp);
         }
-        System.out.println(numArray);
         Collections.sort(pickedNum);
 
+    }
+
+    public final void run(){
+        for (int i = 0 ; i < 6 ; i ++) {
+            setNumArray();
+            selectNum();
+            System.out.println(pickedNum);
+            pickedNum.clear();
+            numArray.clear();
+        }
     }
 }
